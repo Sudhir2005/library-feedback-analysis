@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new_style.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>R.M.K. Engineering College, Kavaraipettai</h1>
+        <br>
+        <br>
+        <h1>Feedback-Analysis-Report</h1> 
+    </header>
+    <div class="container">
+        {% for pie_chart in pie_charts %}
+        <div class="pie-chart">
+            <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
